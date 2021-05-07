@@ -16,4 +16,9 @@ public class BiodataController {
         biodataDto.setAlamat("bandung");
         return DefaultResponse.ok(biodataDto);
     }
+
+    @GetMapping("/geterror")
+    public DefaultResponse<BiodataDto> getBiodataError (){
+        return DefaultResponse.error("Data sudah ada");
+    }
 }
